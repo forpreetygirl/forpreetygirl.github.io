@@ -1,1 +1,1 @@
-# forpreetygirl.github.io
+# forprettygirl.github.io
