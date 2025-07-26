@@ -1,11 +1,12 @@
-/* Занимаем всю высоту экрана и сбрасываем отступы */
+/* Сброс отступов и блокировка горизонтальной прокрутки */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* Центрируем #app по вертикали и горизонтали */
+/* Центрирование контейнера */
 body {
   display: flex;
   align-items: center;
@@ -14,18 +15,19 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Ограничиваем ширину и добавляем отступы внутри */
+/* Основной контейнер приложения */
 #app {
-  width: 100%;
+  width: 90%;
   max-width: 400px;
   padding: 20px;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
+  box-sizing: border-box;
 }
 
-/* Универсальный сброс и базовый вид для кнопок и полей */
+/* Универсальные стили для элементов формы */
 button, input, textarea {
   width: 100%;
   box-sizing: border-box;
@@ -37,7 +39,7 @@ button, input, textarea {
   background: #fff;
 }
 
-/* Акцент на кнопку */
+/* Акцент на кнопках */
 button {
   cursor: pointer;
   background: #007bff;
@@ -49,6 +51,12 @@ button:hover {
   background: #0056b3;
 }
 
+/* Поле выбора даты — строго по ширине контейнера */
+input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* Изображения по центру и адаптивно */
 img {
   display: block;
@@ -57,10 +65,11 @@ img {
   height: auto;
 }
 
-/* Стили для списка итогов */
+/* Стили для списка итоговых ответов */
 ul {
   list-style: none;
   padding: 0;
+  margin: 0 0 16px 0;
   text-align: left;
 }
 ul li {
@@ -69,7 +78,7 @@ ul li {
   font-size: 0.95rem;
 }
 
-/* Адаптация под очень мелкие экраны */
+/* Адаптация под очень узкие экраны */
 @media (max-width: 360px) {
   #app {
     padding: 12px;
