@@ -45,7 +45,7 @@ function showGirlText() {
   clearScreen();
   const p   = document.createElement('p');
   const btn = document.createElement('button');
-  p.textContent = 'Вітаю! Ми не знайомі, однак я дуже хочу познайомитись з такою дуже чарівною дівчиною. Нажаль, я не знаю навіть як Вас звати, тому вирішив піти таким шляхом)';
+  p.textContent = 'Вітаю! Ми не знайомі, однак я дуже хочу познайомитись з такою дуже чарівною дівчиною ;)';
   btn.textContent = 'Далі';
   app.append(p, btn);
   btn.onclick = showStep2;
@@ -54,8 +54,9 @@ function showGirlText() {
 // Шаг 2: выбор «полигон» / «ресторан» / «свое»
 function showStep2() {
   clearScreen();
-const caption = document.createElement('p');
+  const caption = document.createElement('p');
   caption.textContent = 'Пропоную наступні варіанти для зустрічі:';
+  app.append(caption);
   ['Влаштувати перестрілку в тирі', 'Вечеря у ресторані', 'Перегони на картингах', 'Вислухаю інші пропозиції'].forEach(option => {
     const btn = document.createElement('button');
     btn.textContent = option;
