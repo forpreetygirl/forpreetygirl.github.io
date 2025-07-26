@@ -54,7 +54,9 @@ function showGirlText() {
 // Шаг 2: выбор «полигон» / «ресторан» / «свое»
 function showStep2() {
   clearScreen();
-  ['Поїдемо в тир', 'Поїдемо в ресторан', 'Вислухаю інші пропозиції'].forEach(option => {
+const caption = document.createElement('p');
+  caption.textContent = 'Пропоную наступні варіанти для зустрічі:';
+  ['Влаштувати перестрілку в тирі', 'Вечеря у ресторані', 'Перегони на картингах', 'Вислухаю інші пропозиції'].forEach(option => {
     const btn = document.createElement('button');
     btn.textContent = option;
     btn.onclick = () => {
